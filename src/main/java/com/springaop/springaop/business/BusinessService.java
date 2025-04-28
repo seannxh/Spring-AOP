@@ -17,6 +17,12 @@ public class BusinessService {
 
     public int calculateMax(){
         int[] data = dataService1.retrieveData();
+        try{
+            Thread.sleep(30);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e) {
+            };
+        }
         //throw new RuntimeException("Something Went Wrong");
         int maxNumber = Arrays.stream(data).max().orElse(0);
         return maxNumber;
