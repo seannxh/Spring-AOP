@@ -10,6 +10,8 @@
 # Stage 1 - Build\
 
 #Dockerfile Commands
+
+#Maven commands
 #mvn-spring-boot:
 # run - run apps
 # start - Non Blocks - run integrated tests
