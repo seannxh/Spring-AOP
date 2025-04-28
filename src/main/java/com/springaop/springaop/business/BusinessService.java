@@ -2,6 +2,7 @@ package com.springaop.springaop.business;
 
 
 import com.springaop.springaop.data.DataService1;
+import com.springaop.springaop.data.TrackTime;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -14,7 +15,7 @@ public class BusinessService {
     public BusinessService(DataService1 dataService1) {
         this.dataService1 = dataService1;
     }
-
+    @TrackTime
     public int calculateMax(){
         int[] data = dataService1.retrieveData();
         try{

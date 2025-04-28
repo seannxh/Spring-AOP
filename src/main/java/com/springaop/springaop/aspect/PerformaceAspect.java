@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class PerformaceAspect {
     private Logger logger = LoggerFactory.getLogger(getClass());
     //ProceedingJoinPoint can get the method and execute it
-    @Around("execution(* com.springaop.springaop.business.*.*(..))")
+    @Around("@annotation(com.springaop.springaop.data.TrackTime)")
     public Object findExecutionTime(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         //Start a timer
         long StartTimelines = System.currentTimeMillis();
